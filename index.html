@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penentu pH Larutan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="card-container">
+        <header>
+            <h1>🔬 Penentu pH Larutan</h1>
+            <p>Identifikasi sifat larutan menggunakan indikator alami.</p>
+        </header>
+
+        <section class="control-panel">
+            <div class="form-group">
+                <label for="indikator">Pilih Indikator Alami:</label>
+                <div class="select-wrapper">
+                    <select id="indikator">
+                        <option value="telang">Bunga Telang</option>
+                        <option value="sirih">Daun Sirih</option>
+                        <option value="tomat">Tomat</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="phSlider">Atur Nilai pH:</label>
+                <div class="slider-container">
+                    <input type="range" id="phSlider" min="1" max="14" value="7">
+                    <span id="phValue" class="ph-label">pH: 7</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="result-display">
+            <div id="resultColor" class="color-box"></div>
+            <div class="result-text">
+                <h2 id="sifatLarutan">Sifat Larutan: Netral</h2>
+                <div class="ph-info">
+                    <span class="ph-acid">Asam (pH 1-6)</span> | <span class="ph-neutral">Netral (pH 7)</span> | <span class="ph-base">Basa (pH 8-14)</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
